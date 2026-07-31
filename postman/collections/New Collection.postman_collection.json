@@ -405,6 +405,572 @@
         }
       ],
       "id": "9370ce64-b489-4a84-8358-b55b205fef34"
+    },
+    {
+      "name": "Projects",
+      "item": [
+        {
+          "name": "List Projects",
+          "id": "1a4ce32a-969a-4f95-b9b0-8620125d9263",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "10|arbCKTPJbCIMVbBMfbVjd8oKLTNAHvxkEJLadBFA5464f208",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "59d6e5aa-d6cb-459e-94b2-22c06ae44e2b",
+              "name": "List Projects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/projects",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "projects"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:23:39 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:26:16.351Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Projects retrieved successfully\",\n    \"data\": {\n        \"projects\": [\n            {\n                \"id\": 3,\n                \"name\": \"Project 2\",\n                \"description\": \"desc2222\",\n                \"status\": \"completed\",\n                \"created_at\": \"2026/Jul/31\",\n                \"updated_at\": \"2026/Jul/31\",\n                \"tasks_count\": 0\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Project 1\",\n                \"description\": \"desc111111\",\n                \"status\": \"active\",\n                \"created_at\": \"2026/Jul/31\",\n                \"updated_at\": \"2026/Jul/31\",\n                \"tasks_count\": 0\n            }\n        ],\n        \"pagination\": {\n            \"total\": 2,\n            \"per_page\": 15,\n            \"current_page\": 1,\n            \"last_page\": 1\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Project",
+          "id": "382593a1-f5e3-47b4-8ec9-f264c91d83ba",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Project 1",
+                  "type": "text",
+                  "uuid": "795ed386-a99c-4ac8-8349-f69e954fd471"
+                },
+                {
+                  "key": "description",
+                  "value": "desc111111",
+                  "type": "text",
+                  "uuid": "e61493b2-f62c-44d7-bd45-02d44014f082"
+                },
+                {
+                  "key": "status",
+                  "value": "active",
+                  "description": "active,completed,archived",
+                  "type": "text",
+                  "uuid": "053cb033-167a-455f-b1a4-de0b8c78aeff"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "54f67100-53f9-4093-9d3d-f11a7138560a",
+              "name": "Create Project",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Project 1",
+                      "type": "text",
+                      "uuid": "795ed386-a99c-4ac8-8349-f69e954fd471"
+                    },
+                    {
+                      "key": "description",
+                      "value": "desc111111",
+                      "type": "text",
+                      "uuid": "e61493b2-f62c-44d7-bd45-02d44014f082"
+                    },
+                    {
+                      "key": "status",
+                      "value": "active",
+                      "description": "active,completed,archived",
+                      "type": "text",
+                      "uuid": "053cb033-167a-455f-b1a4-de0b8c78aeff"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/projects",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "projects"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:27:52 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:27:55.814Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Project created successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"Project 1\",\n        \"description\": \"desc111111\",\n        \"status\": \"active\",\n        \"created_at\": \"2026/Jul/31\",\n        \"updated_at\": \"2026/Jul/31\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Project",
+          "id": "acb96369-0820-461a-aa89-589b4d6c612a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "65ecced2-4346-4378-aefb-a307b3e0142a"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Project update",
+                  "type": "text",
+                  "uuid": "795ed386-a99c-4ac8-8349-f69e954fd471"
+                },
+                {
+                  "key": "description",
+                  "value": "desc update",
+                  "type": "text",
+                  "uuid": "e61493b2-f62c-44d7-bd45-02d44014f082"
+                },
+                {
+                  "key": "status",
+                  "value": "archived",
+                  "description": "active,completed,archived",
+                  "type": "text",
+                  "uuid": "053cb033-167a-455f-b1a4-de0b8c78aeff"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/3",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "90789da5-97c5-402c-a29e-3445ad20781b",
+              "name": "Update Project",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "65ecced2-4346-4378-aefb-a307b3e0142a"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Project update",
+                      "type": "text",
+                      "uuid": "795ed386-a99c-4ac8-8349-f69e954fd471"
+                    },
+                    {
+                      "key": "description",
+                      "value": "desc update",
+                      "type": "text",
+                      "uuid": "e61493b2-f62c-44d7-bd45-02d44014f082"
+                    },
+                    {
+                      "key": "status",
+                      "value": "archived",
+                      "description": "active,completed,archived",
+                      "type": "text",
+                      "uuid": "053cb033-167a-455f-b1a4-de0b8c78aeff"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/projects/3",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "projects",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:28:34 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:28:38.570Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Project updated successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Project update\",\n        \"description\": \"desc update\",\n        \"status\": \"archived\",\n        \"created_at\": \"2026/Jul/31\",\n        \"updated_at\": \"2026/Jul/31\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Project",
+          "id": "344d1110-3484-4d55-a4e2-d1d277be82ec",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "bf6835ed-988b-4d9d-872c-b91275fc2dbe"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/projects/4",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "projects",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "af6aac77-1a16-4282-b8fc-1349d22706fa",
+              "name": "Delete Project",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "bf6835ed-988b-4d9d-872c-b91275fc2dbe"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/projects/4",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "projects",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:29:06 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:29:09.324Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Project deleted successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ],
+      "id": "7d83be6b-5313-486b-b6cf-14e4dd51ee45"
     }
   ]
 }
