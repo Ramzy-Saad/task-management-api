@@ -1,0 +1,410 @@
+{
+  "info": {
+    "_postman_id": "6ea69c85-8653-4b20-92e8-92c10331a335",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "id": "ca5829f1-efbb-44c5-8ab0-fd53b0e1453b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Ramzy",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "ramzysaad138@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789",
+                  "type": "text"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "123456789",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/register",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a3a6f68e-4e67-4389-ac02-e12e778b9df9",
+              "name": "Register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Ramzy",
+                      "type": "text"
+                    },
+                    {
+                      "key": "email",
+                      "value": "ramzysaad138@gmail.com",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456789",
+                      "type": "text"
+                    },
+                    {
+                      "key": "password_confirmation",
+                      "value": "123456789",
+                      "type": "text"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/auth/register",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:18:47 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:18:48.903Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"Ramzy\",\n            \"email\": \"ramzysaad138@gmail.com\",\n            \"created_at\": \"2026/Jul/31\"\n        },\n        \"token\": \"6|BPxJ1P1UC5g9Pk00pYSzNm6hPiqbqfsy8ofxcCiqe0726109\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login",
+          "id": "24093fcc-269c-4ee4-9a26-364ed16a4713",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "ramzysaad137@gmail.com",
+                  "type": "text",
+                  "uuid": "16998fad-96fb-43ea-a69c-d68553b4106e"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789",
+                  "type": "text",
+                  "uuid": "1471c9a8-8c30-4547-a393-0a1fe0970a46"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c7cab4b9-a15a-473c-887c-f794fa68e09e",
+              "name": "Login",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "email",
+                      "value": "ramzysaad137@gmail.com",
+                      "type": "text",
+                      "uuid": "16998fad-96fb-43ea-a69c-d68553b4106e"
+                    },
+                    {
+                      "key": "password",
+                      "value": "123456789",
+                      "type": "text",
+                      "uuid": "1471c9a8-8c30-4547-a393-0a1fe0970a46"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:19:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:19:49.231Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"User logged in successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Ramzy\",\n            \"email\": \"ramzysaad137@gmail.com\",\n            \"created_at\": \"2026/Jul/31\"\n        },\n        \"token\": \"8|mq1BXuoaqdyzXR0c7VzdmCYvoDUUFt69qsKhQBQ1c6fd215c\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Logout",
+          "id": "f6ef5a00-da4b-48ad-9763-7787708a8879",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "8|mq1BXuoaqdyzXR0c7VzdmCYvoDUUFt69qsKhQBQ1c6fd215c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "7f46c334-0b15-48cf-bf0c-f257e3ffcf12"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "uuid": "0aa3d768-e435-420e-b652-4b6f39dbf7ff"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/auth/logout",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "acc3b604-920d-4e3c-84cc-537fede08cac",
+              "name": "Logout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "7f46c334-0b15-48cf-bf0c-f257e3ffcf12"
+                  },
+                  {
+                    "key": "",
+                    "value": "",
+                    "type": "text",
+                    "uuid": "0aa3d768-e435-420e-b652-4b6f39dbf7ff"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/auth/logout",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "auth",
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 31 Jul 2026 16:21:06 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-07-31T16:21:09.868Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"User logged out successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ],
+      "id": "9370ce64-b489-4a84-8358-b55b205fef34"
+    }
+  ]
+}
