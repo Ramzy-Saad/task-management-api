@@ -1847,6 +1847,90 @@
         }
       ],
       "id": "5ec03597-daa0-43ff-88b5-6ceabc67a7ed"
+    },
+    {
+      "name": "Dashboard",
+      "id": "4adadf8d-56d7-4b5f-81ba-910f22c1e7ff",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/dashboard",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "dashboard"
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "99896d65-7746-443f-943f-20aa5dc2caeb",
+          "name": "Dashboard",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/dashboard",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "dashboard"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Host",
+              "value": "127.0.0.1:8000"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.13"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 01 Aug 2026 12:17:02 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "responseTime": "2026-08-01T12:19:49.031Z",
+          "body": "{\n    \"success\": true,\n    \"message\": \"Dashboard metrics retrieved successfully\",\n    \"data\": {\n        \"projects\": {\n            \"total_projects\": 3,\n            \"active_projects\": 1\n        },\n        \"tasks\": {\n            \"total_tasks\": 4,\n            \"completed_tasks\": 0,\n            \"pending_tasks\": 4,\n            \"overdue_tasks\": 0\n        }\n    }\n}"
+        }
+      ]
     }
   ]
 }

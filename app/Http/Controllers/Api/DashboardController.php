@@ -13,10 +13,7 @@ class DashboardController extends Controller
 {
     use ApiResponse;
 
-    public function __construct(
-        protected DashboardService $dashboardService
-    ) {
-    }
+    public function __construct( protected DashboardService $dashboardService ) {}
 
     /**
      * Get aggregate metrics for the dashboard.
