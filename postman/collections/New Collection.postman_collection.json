@@ -971,6 +971,882 @@
         }
       ],
       "id": "7d83be6b-5313-486b-b6cf-14e4dd51ee45"
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "List Tasks",
+          "id": "24e5a933-c61b-4eef-b4dc-f598d57ec3d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "10|arbCKTPJbCIMVbBMfbVjd8oKLTNAHvxkEJLadBFA5464f208",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks?per_page=10&page=1&project_id=1&priority=high&status=todo",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks"
+              ],
+              "query": [
+                {
+                  "key": "per_page",
+                  "value": "10",
+                  "uuid": "4c2b5d51-e109-4866-b8bd-247af69a6238"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "uuid": "85f217a0-18c5-4d57-839d-b9db71bce521"
+                },
+                {
+                  "key": "project_id",
+                  "value": "1",
+                  "uuid": "dde79392-bab0-4b38-92b1-87aa8f9411fb"
+                },
+                {
+                  "key": "search",
+                  "value": "First",
+                  "uuid": "268ea14e-bf4f-49d5-9570-55ce0bcdb898",
+                  "disabled": true
+                },
+                {
+                  "key": "priority",
+                  "value": "high",
+                  "type": "text",
+                  "uuid": "94295a63-36bb-4c36-ac7b-dba4592542ef"
+                },
+                {
+                  "key": "status",
+                  "value": "todo",
+                  "type": "text",
+                  "uuid": "bca17a78-f91a-40c6-9e30-a3552473dc8a"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "7535050b-2b1a-4423-b06d-676f180384da",
+              "name": "List Tasks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks?per_page=10&page=1",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks"
+                  ],
+                  "query": [
+                    {
+                      "key": "per_page",
+                      "value": "10",
+                      "uuid": "4c2b5d51-e109-4866-b8bd-247af69a6238"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "uuid": "85f217a0-18c5-4d57-839d-b9db71bce521"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 11:36:15 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T11:36:18.876Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Tasks retrieved successfully\",\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": 8,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": \"desc Task\",\n                \"priority\": \"high\",\n                \"status\": \"todo\",\n                \"due_date\": \"2026-12-24T00:00:00+00:00\",\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:35:40+00:00\",\n                \"updated_at\": \"2026-08-01T11:35:40+00:00\"\n            },\n            {\n                \"id\": 7,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": null,\n                \"priority\": \"medium\",\n                \"status\": \"todo\",\n                \"due_date\": null,\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:05:48+00:00\",\n                \"updated_at\": \"2026-08-01T11:05:48+00:00\"\n            },\n            {\n                \"id\": 6,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": null,\n                \"priority\": \"medium\",\n                \"status\": \"todo\",\n                \"due_date\": null,\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:05:29+00:00\",\n                \"updated_at\": \"2026-08-01T11:05:29+00:00\"\n            },\n            {\n                \"id\": 5,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": null,\n                \"priority\": \"medium\",\n                \"status\": \"todo\",\n                \"due_date\": null,\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:05:20+00:00\",\n                \"updated_at\": \"2026-08-01T11:05:20+00:00\"\n            },\n            {\n                \"id\": 4,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": null,\n                \"priority\": \"medium\",\n                \"status\": \"todo\",\n                \"due_date\": null,\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:04:49+00:00\",\n                \"updated_at\": \"2026-08-01T11:04:49+00:00\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 5,\n            \"per_page\": 10,\n            \"current_page\": 1,\n            \"last_page\": 1\n        }\n    }\n}"
+            },
+            {
+              "id": "52e006b1-3d81-4224-925b-6b2f8b8b3097",
+              "name": "search",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks?per_page=10&page=1&project_id=1&search=First",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks"
+                  ],
+                  "query": [
+                    {
+                      "key": "per_page",
+                      "value": "10",
+                      "uuid": "4c2b5d51-e109-4866-b8bd-247af69a6238"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "uuid": "85f217a0-18c5-4d57-839d-b9db71bce521"
+                    },
+                    {
+                      "key": "project_id",
+                      "value": "1",
+                      "uuid": "dde79392-bab0-4b38-92b1-87aa8f9411fb"
+                    },
+                    {
+                      "key": "search",
+                      "value": "First",
+                      "uuid": "268ea14e-bf4f-49d5-9570-55ce0bcdb898"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 11:45:48 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T12:08:51.400Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Tasks retrieved successfully\",\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": 4,\n                \"project_id\": 1,\n                \"title\": \"FirstTask\",\n                \"description\": null,\n                \"priority\": \"medium\",\n                \"status\": \"todo\",\n                \"due_date\": null,\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:04:49+00:00\",\n                \"updated_at\": \"2026-08-01T11:04:49+00:00\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 1,\n            \"per_page\": 10,\n            \"current_page\": 1,\n            \"last_page\": 1\n        }\n    }\n}"
+            },
+            {
+              "id": "cd006832-e800-4d2f-a74a-996b1ea2226f",
+              "name": "filter",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "8b674624-2633-49c8-9b1d-a711117b8480"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks?per_page=10&page=1&project_id=1&priority=high&status=todo",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks"
+                  ],
+                  "query": [
+                    {
+                      "key": "per_page",
+                      "value": "10",
+                      "uuid": "4c2b5d51-e109-4866-b8bd-247af69a6238"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1",
+                      "uuid": "85f217a0-18c5-4d57-839d-b9db71bce521"
+                    },
+                    {
+                      "key": "project_id",
+                      "value": "1",
+                      "uuid": "dde79392-bab0-4b38-92b1-87aa8f9411fb"
+                    },
+                    {
+                      "key": "search",
+                      "value": "First",
+                      "uuid": "268ea14e-bf4f-49d5-9570-55ce0bcdb898",
+                      "disabled": true
+                    },
+                    {
+                      "key": "priority",
+                      "value": "high",
+                      "uuid": "94295a63-36bb-4c36-ac7b-dba4592542ef"
+                    },
+                    {
+                      "key": "status",
+                      "value": "todo",
+                      "uuid": "bca17a78-f91a-40c6-9e30-a3552473dc8a"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 12:10:49 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T12:10:52.181Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Tasks retrieved successfully\",\n    \"data\": {\n        \"tasks\": [\n            {\n                \"id\": 8,\n                \"project_id\": 1,\n                \"title\": \"New Task\",\n                \"description\": \"desc Task\",\n                \"priority\": \"high\",\n                \"status\": \"todo\",\n                \"due_date\": \"2026-12-24T00:00:00+00:00\",\n                \"is_overdue\": false,\n                \"created_at\": \"2026-08-01T11:35:40+00:00\",\n                \"updated_at\": \"2026-08-01T11:35:40+00:00\"\n            }\n        ],\n        \"pagination\": {\n            \"total\": 1,\n            \"per_page\": 10,\n            \"current_page\": 1,\n            \"last_page\": 1\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Tasks",
+          "id": "949d2ffa-f38f-43d6-92cc-abdf00a12f23",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "project_id",
+                  "value": "1",
+                  "type": "text",
+                  "uuid": "67b34245-be38-4eda-a6db-184690362c44"
+                },
+                {
+                  "key": "title",
+                  "value": "New Task",
+                  "type": "text",
+                  "uuid": "d572ee9d-b909-4da5-be72-10dfb041723b"
+                },
+                {
+                  "key": "description",
+                  "value": "desc Task",
+                  "type": "text",
+                  "uuid": "64e84271-dd0f-4810-8872-5fa1c2e40e87"
+                },
+                {
+                  "key": "priority",
+                  "value": "high",
+                  "description": "low,medium,high",
+                  "type": "text",
+                  "uuid": "cd0dbae3-f9a3-4678-ad1d-8d6b6f7671db"
+                },
+                {
+                  "key": "status",
+                  "value": "todo",
+                  "description": "todo,in_progress, done",
+                  "type": "text",
+                  "uuid": "cb3d91bd-6879-4201-8bb3-03ed42fe05d6"
+                },
+                {
+                  "key": "due_date",
+                  "value": "12/24/2026",
+                  "description": "date after today M/d/Y",
+                  "type": "text",
+                  "uuid": "35fc3fc6-6e3a-49a8-9710-26e9b9b8d9b2"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4798c217-f620-4825-9a1d-51386cd840e9",
+              "name": "Create Tasks",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "project_id",
+                      "value": "1",
+                      "type": "text",
+                      "uuid": "67b34245-be38-4eda-a6db-184690362c44"
+                    },
+                    {
+                      "key": "title",
+                      "value": "New Task",
+                      "type": "text",
+                      "uuid": "d572ee9d-b909-4da5-be72-10dfb041723b"
+                    },
+                    {
+                      "key": "description",
+                      "value": "desc Task",
+                      "type": "text",
+                      "uuid": "64e84271-dd0f-4810-8872-5fa1c2e40e87"
+                    },
+                    {
+                      "key": "priority",
+                      "value": "high",
+                      "description": "low,medium,high",
+                      "type": "text",
+                      "uuid": "cd0dbae3-f9a3-4678-ad1d-8d6b6f7671db"
+                    },
+                    {
+                      "key": "status",
+                      "value": "todo",
+                      "description": "todo,in_progress, done",
+                      "type": "text",
+                      "uuid": "cb3d91bd-6879-4201-8bb3-03ed42fe05d6"
+                    },
+                    {
+                      "key": "due_date",
+                      "value": "12/24/2026",
+                      "description": "date after today M/d/Y",
+                      "type": "text",
+                      "uuid": "35fc3fc6-6e3a-49a8-9710-26e9b9b8d9b2"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 11:35:40 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T11:36:05.672Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Task created successfully\",\n    \"data\": {\n        \"id\": 8,\n        \"project_id\": \"1\",\n        \"title\": \"New Task\",\n        \"description\": \"desc Task\",\n        \"priority\": \"high\",\n        \"status\": \"todo\",\n        \"due_date\": \"2026-12-24T00:00:00+00:00\",\n        \"is_overdue\": false,\n        \"created_at\": \"2026-08-01T11:35:40+00:00\",\n        \"updated_at\": \"2026-08-01T11:35:40+00:00\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Tasks",
+          "id": "a3608353-a418-416b-a3af-eea8167976b8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Updated Task",
+                  "type": "text",
+                  "uuid": "d572ee9d-b909-4da5-be72-10dfb041723b"
+                },
+                {
+                  "key": "description",
+                  "value": "desc Task",
+                  "type": "text",
+                  "uuid": "64e84271-dd0f-4810-8872-5fa1c2e40e87"
+                },
+                {
+                  "key": "priority",
+                  "value": "high",
+                  "description": "low,medium,high",
+                  "type": "text",
+                  "uuid": "cd0dbae3-f9a3-4678-ad1d-8d6b6f7671db"
+                },
+                {
+                  "key": "status",
+                  "value": "todo",
+                  "description": "todo,in_progress, done",
+                  "type": "text",
+                  "uuid": "cb3d91bd-6879-4201-8bb3-03ed42fe05d6"
+                },
+                {
+                  "key": "due_date",
+                  "value": "12/29/2026",
+                  "description": "date after today M/d/Y",
+                  "type": "text",
+                  "uuid": "35fc3fc6-6e3a-49a8-9710-26e9b9b8d9b2"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks/8",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks",
+                "8"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5fa458f9-fc1e-48ba-93f7-1c8bc775c836",
+              "name": "Update Tasks",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "title",
+                      "value": "Updated Task",
+                      "type": "text",
+                      "uuid": "d572ee9d-b909-4da5-be72-10dfb041723b"
+                    },
+                    {
+                      "key": "description",
+                      "value": "desc Task",
+                      "type": "text",
+                      "uuid": "64e84271-dd0f-4810-8872-5fa1c2e40e87"
+                    },
+                    {
+                      "key": "priority",
+                      "value": "high",
+                      "description": "low,medium,high",
+                      "type": "text",
+                      "uuid": "cd0dbae3-f9a3-4678-ad1d-8d6b6f7671db"
+                    },
+                    {
+                      "key": "status",
+                      "value": "todo",
+                      "description": "todo,in_progress, done",
+                      "type": "text",
+                      "uuid": "cb3d91bd-6879-4201-8bb3-03ed42fe05d6"
+                    },
+                    {
+                      "key": "due_date",
+                      "value": "12/29/2026",
+                      "description": "date after today M/d/Y",
+                      "type": "text",
+                      "uuid": "35fc3fc6-6e3a-49a8-9710-26e9b9b8d9b2"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks/8",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "8"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 12:13:33 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T12:13:38.404Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 8,\n        \"project_id\": 1,\n        \"title\": \"Updated Task\",\n        \"description\": \"desc Task\",\n        \"priority\": \"high\",\n        \"status\": \"todo\",\n        \"due_date\": \"2026-12-29T00:00:00+00:00\",\n        \"is_overdue\": false,\n        \"created_at\": \"2026-08-01T11:35:40+00:00\",\n        \"updated_at\": \"2026-08-01T12:13:33+00:00\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Tasks",
+          "id": "fc5274fe-a40f-40fc-a1fb-824bbebc917a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "5|nHdKvNiHEYVivW86v309ByE5jmv3OmdxQCVCJZfm237c3a8c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/tasks/8",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "tasks",
+                "8"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "79a5c750-b30d-47da-9326-a83605241aba",
+              "name": "Delete Tasks",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "uuid": "1ec5c7d8-49e6-4997-8745-1bea5dccc44f"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/tasks/8",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "8"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.13"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 01 Aug 2026 12:14:32 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "responseTime": "2026-08-01T12:14:35.462Z",
+              "body": "{\n    \"success\": true,\n    \"message\": \"Task deleted successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ],
+      "id": "5ec03597-daa0-43ff-88b5-6ceabc67a7ed"
     }
   ]
 }
