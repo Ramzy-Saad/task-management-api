@@ -32,8 +32,8 @@ A production-ready, scalable, and fully documented RESTful API built with **Lara
 
 ## Tech Stack & Architecture
 
-* **Framework:** Laravel 11.x
-* **PHP:** 8.2+
+* **Framework:** Laravel 13.x
+* **PHP:** 8.3+
 * **Database:** PostgreSQL / MySQL
 * **Authentication:** Laravel Sanctum
 * **API Documentation:** `darkaonline/l5-swagger` (OpenAPI 3.0)
@@ -45,7 +45,7 @@ A production-ready, scalable, and fully documented RESTful API built with **Lara
 
 Ensure you have the following installed on your system:
 
-* **PHP:** `>= 8.2` (Extensions required: `mbstring`, `pdo`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`)
+* **PHP:** `>= 8.3` (Extensions required: `mbstring`, `pdo`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`)
 * **Composer:** `>= 2.5`
 * **Database Engine:** MySQL 8.0+ or PostgreSQL 14+
 * **Tooling (Optional):** Git, Postman, Docker
