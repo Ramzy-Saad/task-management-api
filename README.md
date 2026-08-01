@@ -1,58 +1,146 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Task Management RESTful API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A production-ready, scalable, and fully documented RESTful API built with **Laravel 11**, **Laravel Sanctum**, and **OpenAPI/Swagger**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. [Features](#features)
+2. [Tech Stack & Architecture](#tech-stack--architecture)
+3. [Prerequisites](#prerequisites)
+4. [Environment Setup](#environment-setup)
+5. [Installation Steps](#installation-steps)
+6. [Database Setup & Seeding](#database-setup--seeding)
+7. [Running the Application](#running-the-application)
+8. [API Documentation (Swagger)](#api-documentation-swagger)
+9. [Running Tests](#running-tests)
+10. [API Endpoints Overview](#api-endpoints-overview)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Authentication:** Token-based authentication using Laravel Sanctum (Register, Login, Logout).
+* **Project Management:** Full CRUD operations with Policy authorization (Users manage their own projects).
+* **Task Management:** Advanced task management with status, priority, due dates, sorting, search, and pagination.
+* **Dashboard Analytics:** Aggregated project and task performance metrics.
+* **OpenAPI 3.0 / Swagger UI:** Interactive browser documentation built with PHP 8 Attributes (`l5-swagger`).
+* **100% JSON API Architecture:** Standardized API responses with zero Blade views.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## Tech Stack & Architecture
 
-## Agentic Development
+* **Framework:** Laravel 11.x
+* **PHP:** 8.2+
+* **Database:** PostgreSQL / MySQL
+* **Authentication:** Laravel Sanctum
+* **API Documentation:** `darkaonline/l5-swagger` (OpenAPI 3.0)
+* **Architecture Pattern:** Action-Domain-Responder / Service-Repository Pattern with API Resources, Form Requests, and Policies.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+---
+
+## Prerequisites
+
+Ensure you have the following installed on your system:
+
+* **PHP:** `>= 8.2` (Extensions required: `mbstring`, `pdo`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`, `bcmath`)
+* **Composer:** `>= 2.5`
+* **Database Engine:** MySQL 8.0+ or PostgreSQL 14+
+* **Tooling (Optional):** Git, Postman, Docker
+
+---
+
+## Environment Setup
+
+Create a `.env` file in the project root by copying the `.env.example`:
 
 ```bash
-composer require laravel/boost --dev
+cp .env.example .env
+```
+Configure your .env variables:
+``` bash
+APP_NAME="Task Management API"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://localhost:8000
 
-php artisan boost:install
+# Database Configuration
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=task_management
+DB_USERNAME=root
+DB_PASSWORD=secret
+
+# Queue Configuration
+QUEUE_CONNECTION=database
+
+# Mail Configuration
+MAIL_MAILER=smtp
+MAIL_HOST=127.0.0.1
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="no-reply@taskmanagement.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+# Swagger API Specs Host
+L5_SWAGGER_GENERATE_ALWAYS=true
+L5_SWAGGER_CONST_HOST=http://localhost:8000/api
+```
+---
+
+## Installation Steps
+Run the following commands in order:
+1. Clone the Repository
+
+
+* git clone [https://github.com/Ramzy-Saad/task-management-api.git](https://github.com/Ramzy-Saad/task-management-api.git)
+* cd task-management-api
+* Install PHP Dependencies
+```bash
+composer install
+```
+* Generate Application Encryption Key
+```bash
+php artisan key:generate
+```
+* Create Database
+Create an empty database matching the DB_DATABASE name defined in your .env file.
+
+## Database Setup & Seeding
+Run migrations to build table schemas and populate seed data:
+### Run database migrations
+```bash
+php artisan migrate
+```
+# (Optional) Seed the database with sample users, projects, and tasks
+```bash
+php artisan db:seed
+```
+---
+## Running the Application
+1. Start Laravel Development Server
+``` bash
+php artisan serve
+```
+The API will be live at: http://localhost:8000/api
+
+API Documentation (Swagger)
+This API includes automated interactive documentation using OpenAPI 3.0 via l5-swagger.
+
+Generate OpenAPI Specs JSON
+```Bash
+php artisan l5-swagger:generate
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Access Interactive Swagger UI
+Open your browser and navigate to:
+```Bash
+http://localhost:8000/api/documentation
+```
